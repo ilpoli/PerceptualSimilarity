@@ -81,7 +81,7 @@ class LPIPS(nn.Module):
             self.chns = [64,128,256,384,384,512,512]
         self.L = len(self.chns)
         self.weights = [1.0] * self.L
-        self.weights = [0.0,0.0,0.0,1.0,1.0]
+        #self.weights = [0.0,0.0,0.0,1.0,1.0]
 
         self.net = net_type(pretrained=not self.pnet_rand, requires_grad=self.pnet_tune)
 
